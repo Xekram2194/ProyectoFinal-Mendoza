@@ -1,0 +1,41 @@
+.principal{
+    z-index: 0;
+    top: 0;
+    position: absolute;
+    background-image: url("../img/Untitled-Artwork 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:  100%;
+    height: 100vh;
+    .container{
+        .info{
+            padding-top: 12rem;
+            h2{
+                color: #fff;
+                font-family: $font-secundary;
+                font-size: 2rem;
+                text-align: center;
+                font-weight: 100;
+                i{
+                    padding-right: 2rem;
+                }
+            }
+            .title{
+                color: $color-mainColor;
+                text-align: center;
+                font-family: $font-principal;
+                font-size: 6rem;
+                text-transform: uppercase;
+                padding-top: 2rem;
+                font-weight: 300;
+            }
+            .icon{
+                text-align: center;
+                i{
+                    color: $color-mainColor;
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}

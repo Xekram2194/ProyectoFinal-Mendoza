@@ -1,0 +1,97 @@
+.memories{
+    margin-top: 85rem;
+    background-color: $color-bgcolor;
+    .container{
+        padding-top: 15rem;
+        .title{
+            padding-bottom: 4rem;
+            h2{
+                text-align: center;
+                a{
+                    text-transform: uppercase;
+                    font-family: $font-principal;
+                    color: $color-mainColor;
+                    font-size: 5.8rem;
+                    text-align: center;
+                }
+            }
+        }
+        .pictures{
+            display: flex;
+            flex-direction: row;
+            gap: 4rem;
+            flex-wrap: wrap;
+            .imagesHallo{
+                width: 24.3rem;
+                height: 24.4rem;
+                // border: .01rem solid #fff;
+                border-radius: 4rem;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    cursor: pointer;
+                    filter: blur(.5rem);
+                    &:hover{
+                        filter: blur(0);
+                        transition: all .8s;
+                    }
+                }
+                .info-message{
+                    display: none;
+                    position: absolute;
+                    background-color: $color-bgcolor;
+                    color: $color-mainColor;
+                    font-family: $font-secundary;
+                    padding: 5px;
+                    border-radius: 5px;
+                }
+            }
+            padding-bottom: 5rem;
+            .modal {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                text-align: center;
+            }
+    
+            .modal-content {
+                background-color: $color-bgcolor;
+                margin: 10% auto;
+                padding: 20px;
+                border: .2px solid #ffffff2d;
+                border-radius: 2rem;
+                max-width: 600px;
+                h2{
+                    color: $color-mainColor;
+                    font-family: $font-principal;
+                    font-size: 5rem;
+                    padding: 1rem 0;
+                }
+                .imgModal{
+                    img{
+                        width: 50%;
+                    }
+                }
+                p{
+                    padding: 4rem;
+                    color: #fff;
+                    font-family: $font-secundary;
+                    font-size: 2rem;
+                }
+                
+            }
+    
+            /* Estilo para cerrar el modal */
+            .close {
+                position: absolute;
+                right: 20px;
+                top: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}

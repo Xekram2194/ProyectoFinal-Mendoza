@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Estilos para el modal */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        text-align: center;
+      }
+
+      .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        max-width: 600px;
+      }
+
+      /* Estilo para cerrar el modal */
+      .close {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Imágenes que se pueden hacer clic -->
+    <img src="img/cards/eigth.png" alt="Imagen 1" class="modal-image" />
+    <img src="img/cards/eleven.png" alt="Imagen 2" class="modal-image" />
+    <!-- Agrega las otras imágenes aquí -->
+
+    <!-- El modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2 id="modalTitle">Título del modal</h2>
+        <img src="" alt="Imagen en modal" id="modalImage" />
+        <p id="modalSummary">Este es un pequeño resumen de la imagen.</p>
+      </div>
+    </div>
+
+    <script>
+      // Obtén elementos HTML
+      var modal = document.getElementById("myModal");
+      var closeModal = document.getElementById("closeModal");
+      var modalTitle = document.getElementById("modalTitle");
+      var modalImage = document.getElementById("modalImage");
+      var modalSummary = document.getElementById("modalSummary");
+
+      // Obtén todas las imágenes
+      var images = document.getElementsByClassName("modal-image");
+
+      // Agrega un evento clic a cada imagen
+      for (var i = 0; i < images.length; i++) {
+        images[i].addEventListener("click", function (event) {
+          modal.style.display = "block";
+          modalTitle.textContent = event.target.alt; // Título de la imagen
+          modalImage.src = event.target.src; // URL de la imagen
+          modalSummary.textContent =
+            "Este es un resumen de la imagen " + event.target.alt;
+        });
+      }
+
+      // Cuando se hace clic en el botón de cierre, cierra el modal
+      closeModal.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // Cierra el modal si se hace clic fuera del contenido del modal
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

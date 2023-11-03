@@ -1,0 +1,47 @@
+.navbar{
+    position: sticky;
+    z-index: 9999;
+    background-color: $color-bgcolor;
+    font-family: $font-secundary;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        .logo   {
+            padding-top: 1rem;
+            a{
+                font-family: $font-principal;
+                font-size: 4rem;
+                color: #fff;
+            }
+        }
+        .menu{
+            padding-top: 1rem;
+            ul{
+                display: flex;
+                // justify-content: space-around;
+                li{
+                    padding: 1rem;
+                    a{
+                        font-size: 1.5rem;
+                        list-style: none;
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .buttonHeader{
+            padding: 1rem;
+            a{
+                list-style: none;
+                text-decoration: none;
+                color: $color-grayColor;
+                padding: 1.5rem;
+                background-color: $color-mainColor;
+                border-radius: 1rem;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+        }
+    }
+}
