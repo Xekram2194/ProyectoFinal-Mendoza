@@ -4,9 +4,6 @@ var modalImage = document.getElementById("modalImage")
 var modalSummary = document.getElementById("modalSummary")
 var modal = document.getElementById("myModal")
 var closeModal = document.getElementById("closeModal")
-
-
-//objetos de las imagenes
 var imagenesHalloween = [
     {
       nombre: "Fantasma en la Luna",
@@ -49,31 +46,7 @@ var imagenesHalloween = [
       resumen: "Dulces y caramelos de Halloween en forma de calabazas y fantasmas.",
     },
   ];
-
-// for (var i = 0; i < imageContainers.length; i++) {
-//     var image = imageContainers[i].querySelector(".modal-image");
-//     var infoMessage = imageContainers[i].querySelector(".info-message");
-    
-//     // Muestra el mensaje de más información al hacer hover
-//     image.addEventListener("mouseover", function() {
-//         infoMessage.style.display = "block";
-//     });
-
-//     // Oculta el mensaje de más información al quitar el hover
-//     image.addEventListener("mouseout", function() {
-//         infoMessage.style.display = "none";
-//     });
-
-//     // Agrega un evento clic para mostrar el modal
-//     image.addEventListener("click", function(event) {
-//         modal.style.display = "block";
-//         var j = Array.from(imageContainers).indexOf(event.currentTarget);
-//         console.log(j)
-//         modalTitle.textContent = imagenesHalloween[j].nombre;
-//         modalImage.src = event.target.src;
-//         modalSummary.textContent = imagenesHalloween[j].resumen;
-//     });
-// }
+  
 Array.from(imageContainers).forEach(function (container, index) {
     var image = container.querySelector(".modal-image");
     var infoMessage = container.querySelector(".info-message");

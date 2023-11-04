@@ -93,5 +93,31 @@
                 cursor: pointer;
             }
         }
+        .joinus{
+            padding-bottom: 4rem;
+            .titleJoin{
+                text-align: center;
+                h2,p{
+                    text-transform: uppercase;
+                    color: #fff;
+                    padding: 3rem 0;
+                    font-family: $font-secundary;
+                }
+                h2{
+                    font-size:4rem;
+                    a{
+                        color: #fff;
+                    }
+                }
+                p{
+                    font-size:5rem;
+                    font-family: $font-principal;
+                    color: $color-mainColor;
+                    i{
+                        color: #fff;
+                    }
+                }
+            }
+        }
     }
 }

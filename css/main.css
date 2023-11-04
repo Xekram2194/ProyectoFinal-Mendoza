@@ -445,5 +445,44 @@ a {
   top: 10px;
   cursor: pointer;
 }
+.memories .container .joinus {
+  padding-bottom: 4rem;
+}
+.memories .container .joinus .titleJoin {
+  text-align: center;
+}
+.memories .container .joinus .titleJoin h2, .memories .container .joinus .titleJoin p {
+  text-transform: uppercase;
+  color: #fff;
+  padding: 3rem 0;
+  font-family: "Rubik", sans-serif;
+}
+.memories .container .joinus .titleJoin h2 {
+  font-size: 4rem;
+}
+.memories .container .joinus .titleJoin h2 a {
+  color: #fff;
+}
+.memories .container .joinus .titleJoin p {
+  font-size: 5rem;
+  font-family: "Jolly Lodger", monospace;
+  color: #FE772D;
+}
+.memories .container .joinus .titleJoin p i {
+  color: #fff;
+}
+
+.prices {
+  background-color: #000015;
+}
+.prices .container .title {
+  text-align: center;
+}
+.prices .container .title h2 a {
+  color: #FE772D;
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-family: "Jolly Lodger", monospace;
+}
 
 /*# sourceMappingURL=main.css.map */
