@@ -79,3 +79,76 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+var icons = document.querySelector('.icons');
+
+icons.addEventListener('mouseover', function(e) {
+  // console.log(e.target.tagName)
+  if (e.target.tagName === 'A') {
+    e.target.querySelector('i').classList.add('fa-beat-fade');
+    console.log(e.target.tagName === 'A')
+  }
+})
+
+icons.addEventListener('mouseout', function(e) {
+  if (e.target.tagName === 'A') {
+    e.target.querySelector('i').classList.remove('fa-beat-fade')
+  }
+})
+
+function closeModal2() {
+  document.getElementById('overlay').style.display = 'none'
+  document.getElementById('modal2').style.display = 'none'
+}
+
+document.querySelector('.closeButton').addEventListener("click",closeModal2)
+
+function buyTicket(title,price){
+  // console.log('el titulo 2' + title)
+  document.getElementById('modalTitle2').innerHTML = title
+  document.getElementById('modalPrice').innerHTML = `Precio: ${price}`
+  document.getElementById('overlay').style.display = 'block'
+  document.getElementById('modal2').style.display = 'block'
+  // document.getElementById('saveButton').removeAttribute('disabled');
+
+}
+
+var buttonReserve = document.querySelector('.safeStorage')
+
+buttonReserve.addEventListener("click", function safeToLocalStorage(){
+  var title = document.getElementById('modalTitle2').innerHTML
+  var price = document.getElementById('modalPrice').innerHTML
+  var name = document.getElementById('name').value
+  var email = document.getElementById('email').value
+  var quantity = document.getElementById('quantity').value
+  localStorage.setItem('ticketInfo', JSON.stringify({title,price,name,email,quantity}))
+  
+  
+  window.location.href = 'reserva.html';
+})
+
+
+
+document.querySelectorAll('.buyTicket').forEach(function(element) {
+  element.addEventListener('click', function() {
+      var title = this.closest('.card').querySelector('.title h3').innerText
+      var price = this.closest('.card').querySelector('.price p').innerText
+      // console.log('el titulo 1' + title)
+      buyTicket(title, price);
+  })
+})
+
+document.getElementById('name').addEventListener('input',toggleSaveButtonState)
+document.getElementById('email').addEventListener('input',toggleSaveButtonState)
+document.getElementById('quantity').addEventListener('input',toggleSaveButtonState)
+
+function toggleSaveButtonState() {
+  var name = document.getElementById('name').value
+  var email = document.getElementById('email').value
+  var quantity = document.getElementById('quantity').value
+  var saveButton = document.getElementById('saveButton')
+  
+  // Si los 3 campos tienen contenido, habilita el botón, de lo contrario, deshabilítalo
+  saveButton.disabled = !(name && email && quantity)
+}

@@ -553,5 +553,166 @@ a {
 .prices .container .cards .card:nth-child(even) .button a:hover {
   color: #FE772D;
 }
+.prices .container .overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.prices .container .modal2 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000015;
+  border: 1px solid #ccc;
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 6rem 4rem;
+}
+.prices .container .modal2 h2 {
+  color: #FE772D;
+  font-family: "Jolly Lodger", monospace;
+  text-align: center;
+  font-size: 5rem;
+  text-shadow: #FFF;
+}
+.prices .container .modal2 p {
+  text-align: center;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+.prices .container .modal2 .btnSafe {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.prices .container .modal2 .btnSafe .safeStorage {
+  font-family: "Rubik", sans-serif;
+  padding: 1rem 2rem;
+  background-color: #333333;
+  color: #fff;
+  border-radius: 1rem;
+  transition: all 1s;
+}
+.prices .container .modal2 .btnSafe .safeStorage:hover {
+  color: #fff;
+  background-color: #FE772D;
+  transition: all 1s;
+}
+.prices .container .modal2 .btnSafe .safeStorage:disabled {
+  background-color: #ddd;
+  color: #999;
+  cursor: not-allowed;
+}
+.prices .container .modal2 .closeButton {
+  position: absolute;
+  top: 20px;
+  right: 696px;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 2rem;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: "Rubik", sans-serif;
+  width: 100vh;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.2rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+  font-family: "Rubik", sans-serif;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+.footer {
+  background-color: #000015;
+  padding: 5rem 0;
+}
+.footer .data {
+  text-align: center;
+}
+.footer .data h1 {
+  color: #FE772D;
+  font-family: "Jolly Lodger", monospace;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+.footer .icons {
+  text-align: center;
+}
+.footer .icons a {
+  color: #333333;
+  font-size: 3rem;
+  padding: 2rem;
+  transition: all 2s;
+}
+.footer .icons a:hover {
+  color: #fff;
+}
 
 /*# sourceMappingURL=main.css.map */

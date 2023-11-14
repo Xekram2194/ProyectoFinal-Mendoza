@@ -1,0 +1,26 @@
+.footer{
+    background-color: $color-bgcolor;
+    // color: #fff;
+    padding: 5rem 0;
+    .data{
+        text-align: center;
+        h1{
+            color: $color-mainColor;
+            font-family: $font-principal;
+            text-transform: uppercase;
+            font-size: 4rem;
+        }
+    }
+    .icons{
+        text-align: center;
+        a{
+            color: $color-grayColor;
+            font-size: 3rem;
+            padding: 2rem;
+            transition: all 2s;
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+}
