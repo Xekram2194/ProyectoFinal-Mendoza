@@ -1,12 +1,37 @@
  // Recupera la información del local storage y la muestra
  var ticketInfo = JSON.parse(localStorage.getItem('ticketInfo'));
-
+//  var zzzz = ticketInfo.price
+//  var numero = Number(zzzz.replace("$", ""))
+// console.log(zzzz)
+// console.log(numero)
  if (ticketInfo) {
-     document.write(`<p>Título: ${ticketInfo.title}</p>`);
-     document.write(`<p>Precio: ${ticketInfo.price}</p>`);
-     document.write(`<p>Nombre: ${ticketInfo.name}</p>`);
-     document.write(`<p>Email: ${ticketInfo.email}</p>`);
-     document.write(`<p>Cantidad: ${ticketInfo.quantity}</p>`);
- } else {
-     document.write('<p>No hay información de reserva.</p>');
- }
+    document.getElementById('reserveTable2').innerHTML = `
+            <tr>
+            <th colspan="2">${ticketInfo.title}</th>
+        </tr>
+        <tr>
+            <td>Nombre</td>
+            <td>${ticketInfo.name}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>${ticketInfo.email}</td>
+        </tr>
+        <tr>
+            <td>Precio</td>
+            <td>${ticketInfo.price}</td>
+        </tr>
+        <tr>
+            <td>Cantidad</td>
+            <td>${ticketInfo.quantity}</td>
+        </tr>
+        <tr>
+            <td>Total a pagar</td>
+            <td>$ ${ticketInfo.quantity * Number(ticketInfo.price.replace("$", ""))}</td>
+        </tr>
+    `;
+} else {
+    document.getElementById('reserveTable2').innerHTML = '<p>No hay información de reserva.</p>';
+}
+
+  

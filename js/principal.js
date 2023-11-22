@@ -107,7 +107,7 @@ document.querySelector('.closeButton').addEventListener("click",closeModal2)
 function buyTicket(title,price){
   // console.log('el titulo 2' + title)
   document.getElementById('modalTitle2').innerHTML = title
-  document.getElementById('modalPrice').innerHTML = `Precio: ${price}`
+  document.getElementById('modalPrice').innerHTML = price
   document.getElementById('overlay').style.display = 'block'
   document.getElementById('modal2').style.display = 'block'
   // document.getElementById('saveButton').removeAttribute('disabled');

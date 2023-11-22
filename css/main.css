@@ -715,4 +715,158 @@ a {
   color: #fff;
 }
 
+.principalRe {
+  background-image: url(../img/wheather/background.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+.principalRe .flexContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 62em) {
+  .principalRe .flexContainer .reserve {
+    height: fit-content;
+  }
+}
+.principalRe .flexContainer .reserve .container {
+  padding: 5rem;
+  color: #FE772D;
+}
+@media only screen and (max-width: 62em) {
+  .principalRe .flexContainer .reserve .container {
+    padding-top: 0;
+  }
+}
+.principalRe .flexContainer .reserve .container h1 {
+  font-size: 5rem;
+  font-family: "Jolly Lodger", monospace;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.principalRe .flexContainer .reserve .container .infoContainer {
+  display: grid;
+  justify-content: center;
+}
+.principalRe .flexContainer .reserve .container .infoContainer .reserveTable tr {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.principalRe .flexContainer .reserve .container .infoContainer .reserveTable tr:first-child {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.747);
+  background-color: transparent !important;
+}
+.principalRe .flexContainer .reserve .container .infoContainer .reserveTable tr:nth-child(odd) {
+  background-color: rgba(174, 0, 255, 0.212);
+}
+.principalRe .flexContainer .reserve .container .infoContainer .reserveTable tr:nth-child(even) {
+  background-color: rgba(0, 0, 255, 0.178);
+}
+.principalRe .flexContainer .reserve .container .infoContainer .reserveTable tr:last-child {
+  background-color: #FE772D;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+.principalRe .flexContainer .reserve .container .infoContainer .reserveTable tr td {
+  padding: 1rem;
+  text-align: center;
+  text-transform: none;
+}
+.principalRe .flexContainer .reserve .container .infoContainer .reserveTable tr td:first-child {
+  text-align: start;
+  text-transform: uppercase;
+}
+.principalRe .flexContainer .container2 {
+  padding-top: 7rem;
+}
+@media only screen and (max-width: 62em) {
+  .principalRe .flexContainer .container2 {
+    padding-top: 2rem;
+  }
+}
+.principalRe .flexContainer .container2 .contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.principalRe .flexContainer .container2 .contenido label {
+  font-family: "Rubik", sans-serif;
+  color: #FE772D;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.principalRe .flexContainer .container2 .contenido select {
+  display: block;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.3;
+  padding: 0.2em 1.4em 0.3em 0.8em;
+  width: 400px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 20px auto;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.03);
+  border-radius: 0.3em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+}
+.principalRe .flexContainer .container2 .contenido .buscar {
+  padding: 1rem;
+  color: #fff;
+  background-color: #FE772D;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  border: 0;
+}
+.principalRe .weather {
+  margin: auto;
+  width: 30%;
+  background-color: rgba(234, 0, 255, 0.26);
+  text-align: center;
+  border-radius: 2rem;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 2rem;
+}
+.principalRe .weather .imageWeather img {
+  width: 40%;
+}
+.principalRe .weather .temp {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+  font-family: "Jolly Lodger", monospace;
+}
+.principalRe .weather .description {
+  font-size: 4rem;
+  padding-bottom: 2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-family: "Jolly Lodger", monospace;
+}
+.principalRe .weather .details {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 2rem;
+}
+.principalRe .weather .details .nose {
+  display: flex;
+  gap: 1rem;
+}
+
 /*# sourceMappingURL=main.css.map */
