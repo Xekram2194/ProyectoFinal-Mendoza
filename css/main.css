@@ -853,11 +853,14 @@ a {
   font-family: "Jolly Lodger", monospace;
 }
 .principalRe .weather .description {
-  font-size: 4rem;
+  font-size: 2.5rem;
   padding-bottom: 2rem;
   text-transform: capitalize;
   font-weight: 700;
-  font-family: "Jolly Lodger", monospace;
+  font-family: "Rubik", sans-serif;
+}
+.principalRe .weather .description p > span {
+  color: rgb(10, 92, 245);
 }
 .principalRe .weather .details {
   display: flex;
